@@ -5,14 +5,7 @@ import TechCards from "./components/TechCards";
 import ProjectLinks from "./components/ProjectLinks";
 import LightDarkMode from "./walk-that-duck/LightDarkMode";
 
-const technologies = [
-  "Next.js",
-  "React",
-  "CSS",
-  "Supabase",
-  "Stripe",
-  "Node.js",
-];
+const technologies = ["Next.js", "React", "CSS", "Supabase"];
 const links = {
   github: "/",
   site: "/",
