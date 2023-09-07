@@ -1,0 +1,160 @@
+.section {
+  width: 100%;
+  object-fit: contain;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  overflow: hidden;
+  place-items: center;
+}
+
+.sectionInfo {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.sugarOrSpiceContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: auto;
+  padding: 1rem 2rem;
+  background-color: var(--black-opaque);
+  border-radius: var(--border-radius);
+}
+
+.sugarOrSpiceContainer div:not(span) {
+  font-weight: 100;
+}
+
+.sugarOrSpiceHeader span {
+  color: var(--accent);
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.sugarOrSpiceHeader span:last-of-type {
+  color: var(--light);
+  font-size: 1.25rem;
+  font-weight: 100;
+}
+
+.textContainer {
+  position: absolute;
+  display: none;
+}
+
+.textContainer:has(.lightModeText) {
+  top: 0;
+  right: 50%;
+}
+
+.textContainer:has(.darkModeText) {
+  bottom: 0;
+  left: 50%;
+}
+
+.textContainer div {
+  /* position: absolute; */
+  font-size: 1.5rem;
+  font-weight: 100;
+}
+
+.lightModeText {
+  top: 0;
+  right: 50%;
+}
+
+.darkModeText {
+  bottom: 0;
+  left: 50%;
+}
+
+.pointer {
+  --size: 14px;
+  --height: 50px;
+  --width: 400px;
+  position: absolute;
+  z-index: -10;
+}
+
+.pointer div {
+  position: absolute;
+}
+
+.pointer div:nth-of-type(1) {
+  height: var(--size);
+  width: var(--size);
+  background-color: var(--black);
+  border-radius: 100%;
+}
+
+.textContainer:has(.lightModeText) .pointer {
+  top: 3rem;
+  left: 50%;
+  transform: translateX(calc(var(--size) / -2));
+}
+
+.pointer div:nth-of-type(2) {
+  height: var(--height);
+  width: var(--width);
+  border-bottom: 5px solid var(--black);
+  border-right: 5px solid var(--black);
+}
+
+.textContainer:has(.lightModeText) .pointer div:nth-of-type(2) {
+  top: calc(var(--size) / 2);
+  left: calc(var(--width) / -1 + var(--size) / 1.5);
+}
+
+.textContainer:has(.darkModeText) .pointer {
+  top: -1.25rem;
+  left: 50%;
+  transform: translateX(calc(var(--size) / -2));
+}
+
+.textContainer:has(.darkModeText) .pointer div:nth-of-type(2) {
+  transform: translateY(0px) rotate(180deg);
+  bottom: calc(var(--size) / -2);
+  right: calc(var(--width) / -1 - var(--size) / 3);
+}
+
+@media (width > 768px) {
+  .section {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .section > div:first-child {
+    justify-self: start;
+  }
+
+  .section > div:last-child {
+    justify-self: end;
+  }
+}
+
+@media (width < 768) {
+}
+
+@media (width > 1024px) {
+  .section {
+    width: 100%;
+  }
+
+  .textContainer {
+    display: block;
+  }
+
+  .sugarOrSpiceHeader span {
+    font-size: 1.75rem;
+  }
+
+  .sugarOrSpiceHeader span:last-of-type {
+    font-size: 1.5rem;
+  }
+}

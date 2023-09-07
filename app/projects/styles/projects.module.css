@@ -1,0 +1,109 @@
+.projectTitle {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.projectDescription {
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  font-weight: 100;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.techCards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.techCards div {
+  font-weight: 600;
+  padding: 0.2rem 0.5rem;
+  background: var(--accent);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.techLinks {
+  margin-bottom: 3rem;
+}
+
+.techLinks a {
+  margin-right: 3rem;
+  text-decoration: none;
+  font-weight: 100;
+  border-bottom: 3px solid var(--accent);
+  transition: 400ms;
+}
+
+.techLinks a:last-of-type {
+  margin-right: 0;
+}
+
+.techLinks *:hover {
+  border-bottom: 3px solid var(--light);
+  padding-bottom: 0.3rem;
+}
+
+.sectionContainer {
+  width: 100%;
+  overflow: hidden;
+}
+
+.sectionHeader {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.sectionContent {
+  display: grid;
+  gap: 2rem;
+}
+
+.imageContainer {
+  position: relative;
+  max-width: 350px;
+  padding: 1rem;
+  object-fit: contain;
+  background-color: var(--black-opaque);
+  border-radius: var(--border-radius);
+}
+
+.imageContainer img {
+  object-fit: cover;
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--border-radius);
+}
+
+section:nth-child(odd) .sectionHeader {
+  margin-right: auto;
+}
+
+section:nth-child(even) .sectionHeader {
+  margin-left: auto;
+}
+
+section:nth-child(odd) .sectionHeader h3:after {
+  left: 6px;
+}
+
+@media (width > 768px) {
+  .projectTitle {
+    margin-bottom: 3rem;
+  }
+
+  .techLinks a {
+    margin-right: 5.5rem;
+  }
+
+  .techLinks {
+    margin-bottom: 4.8rem;
+  }
+
+  section:nth-child(odd) .sectionHeader h3:after {
+    left: 8px;
+  }
+}

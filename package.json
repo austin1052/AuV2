@@ -17,6 +17,13 @@
     "next": "13.4.19",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-frame-component": "^5.2.6",
+    "react-icons": "^4.10.1",
+    "react-syntax-highlighter": "^15.5.0",
+    "styled-react-gist": "^1.0.1",
     "typescript": "5.2.2"
+  },
+  "devDependencies": {
+    "@types/react-syntax-highlighter": "^15.5.7"
   }
 }
