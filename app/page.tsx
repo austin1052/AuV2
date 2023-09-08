@@ -3,14 +3,14 @@
 import WalkThatDuck from "@/app/projects/WalkThatDuck";
 import styles from "@/app/styles/page.module.css";
 import "./globals.css";
-import { useEffect, useRef } from "react";
+// import { useEffect, useRef } from "react";
 
 export default function Home() {
   function handleScrollDown() {
     console.log("click");
   }
 
-  const pageRef = useRef<HTMLDivElement>(null);
+  // const pageRef = useRef<HTMLDivElement>(null);
 
   // const scrollToTop = () => {
   //   setTimeout(() => {}, 500);
@@ -23,7 +23,7 @@ export default function Home() {
   // }, []);
 
   return (
-    <div className={styles.pageContainer} ref={pageRef}>
+    <div className={styles.pageContainer}>
       <div className={styles.heroContainer}>
         <h1 className={styles.austin}>austin</h1>
         <div className={styles.scrollDownContainer}>

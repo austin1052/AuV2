@@ -12,10 +12,7 @@
   --accent: #80060a;
   --accent-2: #c1272d;
 
-  --margin-1: 1rem;
-  --margin-2: 2rem;
-  --margin-3: 3rem;
-  --margin-4: 4rem;
+  --projectText: clamp(1rem, 3vw, 1.5rem);
   --border-radius: 3px;
   --box-shadow: rgba(0, 0, 0, 0.6) 0px 0px 15px,
     rgba(0, 0, 0, 0.22) 0px 10px 15px;
@@ -121,7 +118,7 @@ article {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
 }
 
 section {
@@ -130,39 +127,46 @@ section {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-bottom: 2rem;
+  /* font-size: clamp(1rem, 3vw, 1.1rem); */
+}
+
+section p {
+  font-size: clamp(1rem, 3vw, 1.1rem);
 }
 
 p {
   margin-bottom: 1rem;
 }
 
+p:last-of-type {
+  margin-bottom: 0;
+}
+
+pre {
+  max-width: 100%;
+  overflow-y: scroll;
+}
+
 code * {
   font-family: monospace;
-  font-size: 0.6rem;
+  font-size: clamp(11px, 1.4vw, 14px);
   font-weight: 200;
 }
 
 @media (width > 768px) {
-  main {
-    padding: 1rem 3rem;
-  }
-
   h3:after {
     width: 30px;
-    right: -22px;
+    right: -21.5px;
   }
 }
 
 .placeholder {
   width: 100%;
-  background-color: var(--black-opaque);
   border-radius: var(--border-radius);
-  padding: 1rem;
 }
 
-@media (width > 768px) {
-  code * {
-    font-size: 0.75rem;
+@media (width > 1024px) {
+  main {
+    padding: 1rem 3rem;
   }
 }

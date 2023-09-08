@@ -12,7 +12,9 @@ export default function LightDarkMode() {
       <div className={projectStyles.sectionHeader}>
         <h3>choose your style</h3>
       </div>
-      <div className={`${styles.section} ${projectStyles.sectionContent}`}>
+      <div
+        className={`${styles.sectionContent} ${projectStyles.sectionContent}`}
+      >
         <ProjectImage
           src={wtdHomeLight}
           alt="walk that duck light mode home screen"
