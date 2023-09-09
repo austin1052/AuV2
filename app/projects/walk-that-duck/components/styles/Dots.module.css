@@ -1,0 +1,135 @@
+.background {
+  --height: 0px;
+  --time: 0s;
+  --background-gradient-light: linear-gradient(
+    0deg,
+    var(--light) 0%,
+    var(--white) 100%
+  );
+  --background-gradient-dark: linear-gradient(
+    0deg,
+    var(--black) 0%,
+    var(--dark) 100%
+  );
+  --accent: rgb(198, 96, 138);
+  --accent-opaque: rgba(198, 96, 138, 0.6);
+  --dark: rgb(22, 22, 22);
+  --white: rgb(243, 221, 231);
+
+  width: 100%;
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  background: var(--background-gradient-light);
+}
+
+.backdrop {
+  position: absolute;
+  z-index: 20;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  backdrop-filter: blur(1px);
+}
+
+.dot {
+  width: 2px;
+  height: 2px;
+  border-radius: 100%;
+  background-color: red;
+  position: absolute;
+  bottom: 1rem;
+}
+
+.fall {
+  animation: fall var(--time) linear infinite backwards;
+}
+
+.rise {
+  animation: rise var(--time) linear infinite backwards;
+}
+
+.middleLine {
+  position: absolute;
+  z-index: 30;
+  top: 0rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  min-height: 100%;
+  margin: 0 auto;
+  background-color: var(--white);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0) 0%,
+    var(--light) 10%,
+    var(--accent-opaque) 45%,
+    var(--light) 80%,
+    rgba(0, 0, 0, 0) 90%
+  );
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(var(--height));
+    opacity: 0;
+  }
+
+  30% {
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+}
+
+@keyframes rise {
+  0% {
+    transform: translateY(50px);
+    opacity: 1;
+  }
+
+  40% {
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(var(--height));
+    opacity: 0;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .background {
+    background: var(--background-gradient-dark);
+  }
+
+  .dot {
+    background-color: var(--accent);
+  }
+
+  .middleLine {
+    background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0) 0%,
+      var(--dark) 12%,
+      var(--accent-opaque) 50%,
+      var(--dark) 85%,
+      rgba(0, 0, 0, 0) 100%
+    );
+  }
+}

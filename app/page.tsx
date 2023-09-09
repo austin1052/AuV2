@@ -2,8 +2,8 @@
 
 import WalkThatDuck from "@/app/projects/WalkThatDuck";
 import SyntaxHighlighter from "react-syntax-highlighter/dist/esm/default-highlight";
-import { snippetTheme } from "./code-snippets/snippet-theme";
-import { austinCode } from "./code-snippets/austin-animation";
+import { snippetTheme } from "@/app/code-snippets/snippet-theme";
+import { austinCode } from "@/app/code-snippets/austin-animation";
 import styles from "@/app/styles/page.module.css";
 import "./globals.css";
 // import { useEffect, useRef } from "react";

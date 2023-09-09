@@ -2,7 +2,7 @@ import ProjectImage from "../components/ProjectImage";
 import { wtdHomeLight, wtdHomeDark } from "@/app/assets/index";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { snippetTheme } from "@/app/code-snippets/snippet-theme";
-import { css } from "@/app/code-snippets/light-dark-mode";
+import { lightDarkCSS } from "@/app/code-snippets/light-dark-mode";
 import styles from "@/app/projects/walk-that-duck/styles/LightDarkMode.module.css";
 import projectStyles from "@/app/projects/styles//projects.module.css";
 
@@ -33,7 +33,7 @@ export default function LightDarkMode() {
               are you <span>sugar</span> or <span>spice</span> <span>?</span>
             </div>
             <SyntaxHighlighter language="css" style={snippetTheme}>
-              {css}
+              {lightDarkCSS}
             </SyntaxHighlighter>
           </div>
           <div className={styles.textContainer}>

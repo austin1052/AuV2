@@ -42,6 +42,7 @@
 .austin {
   position: relative;
   animation: jump 1.6s ease 500ms;
+  transform-style: preserve-3d;
 }
 
 .hiddenAustin::after {

@@ -1,10 +1,11 @@
 // "use client";
 
-import styles from "@/app/projects/styles/projects.module.css";
-import TechCards from "./components/TechCards";
-import ProjectLinks from "./components/ProjectLinks";
-import LightDarkMode from "./walk-that-duck/LightDarkMode";
+import styles from "@/projects/styles/projects.module.css";
+import TechCards from "@/projects/components/TechCards";
+import ProjectLinks from "@/projects/components/ProjectLinks";
+import LightDarkMode from "@/projects/walk-that-duck/LightDarkMode";
 import AuthFormValidation from "@/projects/walk-that-duck/AuthFormValidation";
+import Animations from "@/projects/walk-that-duck/Animations";
 
 const technologies = ["Typescript", "Next.js", "React", "CSS", "Supabase"];
 const links = {
@@ -14,7 +15,7 @@ const links = {
 
 export default function WalkThatDuck() {
   return (
-    <article>
+    <article className={styles.walkThatDuck}>
       <div className={styles.projectTitle}>
         <h2>walk that duck</h2>
       </div>
@@ -54,6 +55,7 @@ export default function WalkThatDuck() {
       {/* </section> */}
       <LightDarkMode />
       <AuthFormValidation />
+      <Animations />
     </article>
   );
 }
