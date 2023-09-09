@@ -10,6 +10,8 @@ import styles from "@/projects/walk-that-duck/styles/AuthFormValidation.module.c
 import projectStyles from "@/app/projects/styles/projects.module.css";
 import AuthForm from "./components/DemoForm";
 
+let pattern = `".{8,}"`;
+
 export default function AuthFormValidation() {
   return (
     <section>
@@ -21,17 +23,31 @@ export default function AuthFormValidation() {
       >
         <div className={styles.description}>
           <p>
-            Styles, animations, and user alerts for invalid form input were
-            built using the CSS using the psuedo selectors :invalid
-            :placeholder-shown and :focus and utilizing variables.
+            `Alerts and animations are applied to the form using CSS and
+            Typescript. The CSS psuedo selectors :focus, :invalid, and
+            :placeholder-shown provide an easy way to change the colors of the
+            form based off of the user&apos;s input. Adding &quot;required&quot;
+            and type=&quot;email&quot; to the HTML input element lets the
+            browser recognize input that does not include &quot;@&quot;. When a
+            user tries to submit the form, any styles applied using the selector
+            :invalid will will become active. The same can be done with other
+            input fields, but they must include the &quot;pattern&quot;
+            attribute with a regular expression as the value. For example, to
+            require a password to be at least 8 characters, pattern={pattern}{" "}
+            should be added to the input element.
           </p>
           <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis
-            qui sint similique repellendus totam dolorum nobis eius atque
-            debitis ullam omnis fugit voluptatem iste fuga minus hic, vero
-            tempora deleniti rem quibusdam. Assumenda velit illum a tempora
-            corporis facere labore dignissimos tempore hic quidem est vel fugiat
-            dolor, cupiditate consectetur?
+            These CSS selectors can be combined with the selector :not to ensure
+            that the invlaid styles are only applied after the user has finished
+            typing and has either clicked off of the input field or tried to
+            submit the form.
+          </p>
+          <p>
+            Try out the demo below to see what happens when you try to submit
+            the form with an invalid email. When you click demo, the browser
+            will show a custom validity message. When you click off of the email
+            field, the form will run a shake animation. These features give
+            users nice information on how to correctly fill out the form.
           </p>
         </div>
         <div className={styles.customValidity}>
