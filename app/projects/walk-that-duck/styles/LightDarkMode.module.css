@@ -3,16 +3,6 @@
   place-items: center;
 }
 
-/* .sectionContent {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
-  width: 100%;
-  align-items: center;
-} */
-
 .sugarOrSpiceContainer {
   display: flex;
   flex-direction: column;
@@ -91,17 +81,17 @@
   border-radius: 100%;
 }
 
-.textContainer:has(.lightModeText) .pointer {
-  top: 3rem;
-  left: 50%;
-  transform: translateX(calc(var(--size) / -2));
-}
-
 .pointer div:nth-of-type(2) {
   height: var(--height);
   width: var(--width);
   border-bottom: 5px solid var(--color);
   border-right: 5px solid var(--color);
+}
+
+.textContainer:has(.lightModeText) .pointer {
+  top: 3rem;
+  left: 50%;
+  transform: translateX(calc(var(--size) / -2));
 }
 
 .textContainer:has(.lightModeText) .pointer div:nth-of-type(2) {

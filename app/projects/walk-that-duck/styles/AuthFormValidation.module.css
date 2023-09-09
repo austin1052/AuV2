@@ -53,6 +53,8 @@
   left: calc(50% + var(--width));
 }
 
+/* move this to global */
+
 .pointer div {
   position: absolute;
 }
@@ -72,6 +74,8 @@
   border-bottom: 5px solid var(--color);
   border-right: 5px solid var(--color);
 }
+
+/* ******** */
 
 @media (width > 768px) {
   .sectionContent {
