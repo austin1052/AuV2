@@ -29,7 +29,7 @@
 }
 
 .austinContainer * {
-  font-size: clamp(3rem, 12vw, 8rem);
+  font-size: clamp(3rem, 12vw, 6rem);
   font-weight: 600;
 }
 
@@ -41,7 +41,7 @@
 
 .austin {
   position: relative;
-  animation: jump 1.5s ease 500ms;
+  animation: jump 1.6s ease 500ms;
 }
 
 .hiddenAustin::after {

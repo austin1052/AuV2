@@ -7,8 +7,8 @@ type View = "sign-in" | "sign-up" | "check-email";
 
 export default function DemoForm() {
   const [email, setEmail] = useState("not-an-email");
-  const [password, setPassword] = useState("");
-  const [userName, setUserName] = useState("");
+  const [password, setPassword] = useState("password");
+  const [userName, setUserName] = useState("Marcia Marcia Marcia");
   const [view, setView] = useState<View>("sign-in");
   // const [showSignUp, setShowSignUp] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
@@ -60,10 +60,11 @@ export default function DemoForm() {
       >
         <div className={`${styles.signUpInput} ${styles.inputContainer}`}>
           <input
+            // disabled
             required
             name="email"
             type="email"
-            onChange={(e) => setEmail(e.target.value)}
+            // onChange={(e) => setEmail(e.target.value)}
             value={email}
             placeholder="you@example.com"
             onInvalid={(e: any) => setValidityMessage(e, "email")}
@@ -83,6 +84,7 @@ export default function DemoForm() {
 
         <div className={`${styles.signUpInput} ${styles.inputContainer}`}>
           <input
+            disabled
             required
             name="password"
             type="password"
@@ -119,6 +121,7 @@ export default function DemoForm() {
           ref={animationRef}
         >
           <input
+            disabled
             required
             name="name"
             type="text"
