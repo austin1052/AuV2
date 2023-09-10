@@ -2,6 +2,9 @@
 
 import styles from "@/app/styles/Nav.module.css";
 import { useState, useEffect, useCallback } from "react";
+import SocialMediaIcons from "./SocialMediaIcons";
+
+const navLinks = ["projects", "about", "contact"];
 
 export default function Nav() {
   const [navOpen, setNavOpen] = useState(false);
@@ -51,9 +54,18 @@ export default function Nav() {
           close
         </div>
         <ul className={styles.navLinks}>
-          <li>about</li>
-          <li>projects</li>
+          {navLinks.map((link, i) => {
+            const delay = i * 50 + 500;
+            return (
+              <li key={link} style={{ transitionDelay: `${delay}ms` }}>
+                {link}
+              </li>
+            );
+          })}
         </ul>
+        <div className={styles.socialMediaIcons}>
+          <SocialMediaIcons />
+        </div>
       </div>
     </nav>
   );

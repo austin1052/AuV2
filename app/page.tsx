@@ -15,6 +15,7 @@ export default function Home() {
   }
 
   const pageRef = useRef<HTMLDivElement>(null);
+  const projectsRef = useRef<HTMLDivElement>(null);
 
   const scrollToTop = () => {
     console.log("scroll");
@@ -24,29 +25,33 @@ export default function Home() {
   return (
     <>
       <Nav />
-      <div className={styles.pageContainer} ref={pageRef}>
-        <div className={styles.heroContainer}>
-          <div className={styles.austinContainer}>
-            <div className={styles.austin}>austin</div>
-            <h1 className={styles.hiddenAustin}>austin</h1>
-          </div>
-          <SyntaxHighlighter language="css" style={snippetTheme}>
-            {austinCode}
-          </SyntaxHighlighter>
-          <div className={styles.scrollDownContainer}>
-            <button
-              className={styles.scrollDownText}
-              onClick={handleScrollDown}
-            >
-              check out my work
-            </button>
-            <div className={styles.scrollDownArrowContainer}>
-              <div className={styles.scrollDownArrow}></div>
+      <main>
+        <div className={styles.pageContainer} ref={pageRef}>
+          <div className={styles.heroContainer}>
+            <div className={styles.austinContainer}>
+              <div className={styles.austin}>austin</div>
+              <h1 className={styles.hiddenAustin}>austin</h1>
+            </div>
+            <SyntaxHighlighter language="css" style={snippetTheme}>
+              {austinCode}
+            </SyntaxHighlighter>
+            <div className={styles.scrollDownContainer}>
+              <button
+                className={styles.scrollDownText}
+                onClick={handleScrollDown}
+              >
+                check out my work
+              </button>
+              <div className={styles.scrollDownArrowContainer}>
+                <div className={styles.scrollDownArrow}></div>
+              </div>
             </div>
           </div>
+          <div className={styles.projects} ref={projectsRef}>
+            <WalkThatDuck />
+          </div>
         </div>
-        <WalkThatDuck />
-      </div>
+      </main>
     </>
   );
 }

@@ -1,4 +1,3 @@
-
 import "./globals.css";
 import type { Metadata } from "next";
 
@@ -18,8 +17,7 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.png" />
       </head>
       <body>
-       
-        <main>{children}</main>
+        {children}
         <div className="background"></div>
       </body>
     </html>

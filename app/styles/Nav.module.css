@@ -25,7 +25,7 @@
 }
 
 .menuText {
-  top: 0.35rem;
+  top: 0.3rem;
   left: 50%;
 }
 
@@ -34,11 +34,11 @@
 }
 
 .closeText {
-  top: 0.25rem;
+  top: 0.6rem;
   left: 50%;
   transform: translate(-50%, -100%);
   transition: 500ms;
-  transition-delay: 250ms;
+  transition-delay: 600ms;
   opacity: 0;
   visibility: hidden;
 }
@@ -52,7 +52,7 @@
 }
 
 .circle.navOpen .menuText {
-  transform: translate(-50%, -200%);
+  transform: translate(-50%, -225%);
   opacity: 0;
   visibility: hidden;
 }
@@ -80,11 +80,48 @@ nav:has(.navOpen) .navMenu {
 }
 
 .navLinks {
-  margin-top: 3rem;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   list-style-type: none;
+}
+
+.navLinks li {
+  margin-bottom: 3rem;
+  font-size: 2rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: 500ms 500ms;
+  transform: translateY(-50px);
+}
+
+nav:has(.navOpen) .navLinks li {
+  margin-bottom: 3rem;
+  font-size: 2rem;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0px);
+}
+
+.socialMediaIcons {
+  position: absolute;
+  bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  font-size: 2rem;
+  transform: translateY(200%);
+  transition: 500ms 1000ms;
+}
+
+.socialMediaIcons a:not(:last-of-type) {
+  margin-right: 3rem;
+}
+
+nav:has(.navOpen) .socialMediaIcons {
+  transform: translateY(0%);
 }
 
 body:has(.navOpen) {
