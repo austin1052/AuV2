@@ -1,6 +1,7 @@
 .background {
   --height: 0px;
   --time: 0s;
+  --name: "";
   --background-gradient-light: linear-gradient(
     0deg,
     var(--light) 0%,
@@ -45,6 +46,7 @@
   background-color: red;
   position: absolute;
   bottom: 1rem;
+  animation: var(--name) var(--time) linear infinite backwards;
 }
 
 .fall {

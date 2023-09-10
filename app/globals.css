@@ -10,7 +10,7 @@
 
   --light: #ffbeb3;
   --accent: #80060a;
-  --accent-2: #c1272d;
+  --accent-2: #ca3f44;
 
   --projectText: clamp(1rem, 3vw, 1.5rem);
   --border-radius: 3px;
@@ -22,11 +22,6 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: brother-1816, sans-serif;
-  font-weight: 200;
-  font-style: normal;
-  font-size: 1.025rem;
-  text-align: justify;
 }
 
 body {
@@ -38,6 +33,11 @@ body {
   );
   min-height: 100vh;
   background-color: var(--dark);
+  font-family: brother-1816, sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 1.025rem;
+  text-align: justify;
 }
 
 .background {
@@ -60,6 +60,7 @@ body * {
 }
 
 main {
+  /* position: relative; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -148,10 +149,20 @@ pre {
 }
 
 code * {
-  font-family: monospace;
-  font-size: clamp(11px, 1.4vw, 14px);
-  font-weight: 200;
+  font-family: "Courier New", Courier, monospace;
+  font-size: clamp(11px, 1.4vw, 14.5px);
+  font-weight: 500;
 }
+
+p > code {
+  font-family: "Courier New", Courier, monospace;
+  color: var(--accent);
+  font-size: clamp(1.025rem, 3vw, 1.2rem);
+  font-weight: 500;
+}
+
+/* p > code * {
+} */
 
 @media (width > 768px) {
   h3:after {

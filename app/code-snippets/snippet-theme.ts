@@ -96,7 +96,7 @@ export const snippetTheme: { [key: string]: CSSProperties } =  {
   },
   "hljs": {
     // "fontSize": "1rem",
-    // "fontFamily": "monospace",
+    "fontFamily": "monospace",
     // "fontWeight": "200",
       "display": "block",
       "overflowX": "auto",

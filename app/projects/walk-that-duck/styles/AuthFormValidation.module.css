@@ -42,7 +42,7 @@
 
 .pointer {
   --size: 14px;
-  --height: 385px;
+  --height: 350px;
   --width: 300px;
   --color: var(--dark);
   display: none;
