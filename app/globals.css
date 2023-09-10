@@ -22,6 +22,11 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  /* nav bar hides on scroll down and shows on scroll up */
+  /* if user clicks link to scroll to section that is above their current position */
+  /* the nav menu will still be visible */
+  /* scroll margin is to adjust for height of nav menu bar when using scrollIntoView */
+  scroll-margin: 50px;
 }
 
 body {

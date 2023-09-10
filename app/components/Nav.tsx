@@ -3,13 +3,15 @@
 import styles from "@/app/styles/Nav.module.css";
 import { useState, useEffect, useCallback } from "react";
 import SocialMediaIcons from "./SocialMediaIcons";
+import Link from "next/link";
 
 const navLinks = ["projects", "about", "contact"];
 
-export default function Nav() {
+export default function Nav({ scrollToSection }: any) {
   const [navOpen, setNavOpen] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [navHidden, setNavHidden] = useState(false);
+  const [linkScroll, setLinkScroll] = useState(false);
 
   const controlNavbar = useCallback(() => {
     if (typeof window !== "undefined") {
@@ -57,7 +59,15 @@ export default function Nav() {
           {navLinks.map((link, i) => {
             const delay = i * 50 + 500;
             return (
-              <li key={link} style={{ transitionDelay: `${delay}ms` }}>
+              <li
+                key={link}
+                onClick={() => {
+                  // setLinkScroll(true);
+                  setNavOpen(false);
+                  scrollToSection(link);
+                }}
+                style={{ transitionDelay: `${delay}ms` }}
+              >
                 {link}
               </li>
             );

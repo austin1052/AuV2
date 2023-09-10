@@ -22,9 +22,22 @@ export default function Home() {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   };
 
+  const refs: { [key: string]: React.RefObject<HTMLDivElement> } = {
+    projects: projectsRef,
+    // about: aboutRef,
+    // contact: contactRef,
+  };
+
+  const scrollToSection = (sectionId: string) => {
+    let targetRef = refs[sectionId];
+    if (targetRef && targetRef.current) {
+      targetRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <>
-      <Nav />
+      <Nav scrollToSection={scrollToSection} />
       <main>
         <div className={styles.pageContainer} ref={pageRef}>
           <div className={styles.heroContainer}>
