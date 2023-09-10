@@ -132,11 +132,11 @@ section {
 }
 
 section p {
-  font-size: clamp(1rem, 3vw, 1.1rem);
 }
 
 p {
   margin-bottom: 1rem;
+  font-size: clamp(1rem, 3vw, 1.1rem);
 }
 
 p:last-of-type {
@@ -150,15 +150,15 @@ pre {
 
 code * {
   font-family: "Courier New", Courier, monospace;
-  font-size: clamp(11px, 1.4vw, 14.5px);
+  font-size: clamp(12px, 1.4vw, 13.5px);
   font-weight: 500;
 }
 
 p > code {
   font-family: "Courier New", Courier, monospace;
   color: var(--accent);
-  font-size: clamp(1.025rem, 3vw, 1.2rem);
-  font-weight: 500;
+  font-size: clamp(16.5px, 3vw, 18px);
+  font-weight: 600;
 }
 
 /* p > code * {

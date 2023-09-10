@@ -1,16 +1,15 @@
 .circle {
-  --circle-height: 100px;
   position: fixed;
   z-index: 100;
   top: 0;
   left: 50%;
-  transform: translate(-50%, -50%);
-  height: var(--circle-height);
-  aspect-ratio: 1/1;
-  border-radius: 100%;
+  transform: translate(-50%, -1px);
+  height: 40px;
+  width: 100px;
   background-color: var(--accent);
   backdrop-filter: blur(6px);
-  transition: 300ms;
+  transition: width 500ms 500ms, height 500ms, transform 500ms,
+    background-color 500ms;
 }
 
 .circle.circleHidden {
@@ -21,14 +20,13 @@
 .closeText {
   font-size: 1.5rem;
   font-weight: 600;
-  /* transition: 250ms; */
+  transition: 1000ms;
   position: absolute;
 }
 
 .menuText {
-  top: 50%;
+  top: 0.35rem;
   left: 50%;
-  transition: 250ms;
 }
 
 .menuText {
@@ -36,8 +34,9 @@
 }
 
 .closeText {
+  top: 0.25rem;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -100%);
   transition: 500ms;
   transition-delay: 250ms;
   opacity: 0;
@@ -45,13 +44,15 @@
 }
 
 .circle.navOpen {
-  height: 300%;
+  height: 100vh;
+  width: 100%;
   background-color: var(--black-opaque);
-  transition: 1000ms;
+  transition: width 500ms, height 500ms 500ms, background-color 500ms 500ms,
+    transform 500ms;
 }
 
 .circle.navOpen .menuText {
-  transform: translate(-50%, -100%);
+  transform: translate(-50%, -200%);
   opacity: 0;
   visibility: hidden;
 }
@@ -84,11 +85,6 @@ nav:has(.navOpen) .navMenu {
   flex-direction: column;
   align-items: center;
   list-style-type: none;
-}
-
-.closeNavMenuButton {
-  position: fixed;
-  bottom: 3rem;
 }
 
 body:has(.navOpen) {
