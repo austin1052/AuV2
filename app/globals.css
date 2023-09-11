@@ -136,9 +136,6 @@ section {
   /* font-size: clamp(1rem, 3vw, 1.1rem); */
 }
 
-section p {
-}
-
 p {
   margin-bottom: 1rem;
   font-size: clamp(1rem, 3vw, 1.1rem);
@@ -155,7 +152,7 @@ pre {
 
 code * {
   font-family: "Courier New", Courier, monospace;
-  font-size: clamp(12px, 1.4vw, 13.5px);
+  font-size: clamp(12px, 1.4vw, 14px);
   font-weight: 500;
 }
 

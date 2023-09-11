@@ -41,10 +41,10 @@ export default function Home() {
       <main>
         <div className={styles.pageContainer} ref={pageRef}>
           <div className={styles.heroContainer}>
-            <div className={styles.austinContainer}>
+            {/* <div className={styles.austinContainer}>
               <div className={styles.austin}>austin</div>
               <h1 className={styles.hiddenAustin}>austin</h1>
-            </div>
+            </div> */}
             <SyntaxHighlighter language="css" style={snippetTheme}>
               {austinCode}
             </SyntaxHighlighter>

@@ -7,7 +7,7 @@
   position: relative;
   display: grid;
   grid-template-rows: repeat(2, auto);
-  gap: 1rem;
+  gap: 1.5rem;
   justify-items: center;
   width: 100%;
 }
@@ -15,7 +15,7 @@
 .authFormContainer {
   width: min(350px, 100%);
   height: fit-content;
-  padding: 1rem;
+  padding: 2rem 1rem;
   background-color: var(--black);
   border: 5px solid var(--dark);
   border-radius: var(--border-radius);

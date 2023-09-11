@@ -1,7 +1,5 @@
 .sectionContent {
   overflow: hidden;
-  /* gap: 1rem; */
-  /* place-items: center; */
   align-items: center;
 }
 
@@ -9,13 +7,8 @@
   display: grid;
   justify-items: center;
   padding-bottom: 1rem;
-  /* display: flex;
-  flex-direction: column;
-  align-items: center; */
   width: 100%;
   margin: auto;
-  /* padding: 1rem 1rem; */
-  /* background-color: var(--black-opaque); */
   border-radius: var(--border-radius);
 }
 
