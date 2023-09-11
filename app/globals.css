@@ -7,11 +7,10 @@
   --mid: #000000;
   --dark: #210009;
   /* --dark: #180007; */
-
   --light: #ffbeb3;
   --accent: #80060a;
+  --accent-opaque: rgba(128, 6, 10, 0.5);
   --accent-2: #ca3f44;
-
   --projectText: clamp(1rem, 3vw, 1.5rem);
   --border-radius: 3px;
   --box-shadow: rgba(0, 0, 0, 0.6) 0px 0px 15px,
@@ -167,6 +166,10 @@ p > code {
 } */
 
 @media (width > 768px) {
+  * {
+    scroll-margin: 6rem;
+  }
+
   h3:after {
     width: 30px;
     right: -21.5px;

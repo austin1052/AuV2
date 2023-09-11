@@ -3,23 +3,34 @@
   z-index: 100;
   top: 0;
   left: 50%;
-  transform: translate(-50%, -1px);
   height: 40px;
   width: 100px;
   background-color: var(--accent);
   backdrop-filter: blur(6px);
+  transform: translate(-50%, -1%);
   transition: width 500ms 500ms, height 500ms, transform 500ms,
     background-color 500ms;
+  animation: slide-down 1000ms;
+}
+
+@keyframes slide-down {
+  0% {
+    transform: translate(-50%, -101%);
+  }
+  100% {
+    transform: translate(-50%, 0%);
+  }
 }
 
 .circle.circleHidden {
   transform: translate(-50%, -101%);
+  transition: transform 500ms;
 }
 
 .menuText,
 .closeText {
   font-size: 1.5rem;
-  font-weight: 600;
+  font-weight: 100;
   transition: 1000ms;
   position: absolute;
 }

@@ -1,9 +1,9 @@
 import { useState, useEffect, createContext } from "react";
 
-export const MobileContext = createContext<boolean>(true);
+export const MobileContext = createContext<boolean | null>(null);
 
 export function MobileContextProvider({ children }: any) {
-  const [isMobile, setIsMobile] = useState(true);
+  const [isMobile, setIsMobile] = useState<boolean | null>(null);
   const [width, setWidth] = useState<number>();
 
   useEffect(() => {

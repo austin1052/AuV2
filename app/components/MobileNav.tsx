@@ -1,17 +1,20 @@
 "use client";
 
-import styles from "@/app/styles/Nav.module.css";
+import styles from "@/app/styles/MobileNav.module.css";
 import { useState, useEffect, useCallback } from "react";
 import SocialMediaIcons from "./SocialMediaIcons";
 import Link from "next/link";
 
-const navLinks = ["projects", "about", "contact"];
+const navLinks = ["about", "contact", "projects"];
 
-export default function Nav({ scrollToSection }: any) {
+interface Props {
+  scrollToSection: (sectionId: string) => void;
+}
+
+export default function MobileNav({ scrollToSection }: Props) {
   const [navOpen, setNavOpen] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [navHidden, setNavHidden] = useState(false);
-  const [linkScroll, setLinkScroll] = useState(false);
 
   const controlNavbar = useCallback(() => {
     if (typeof window !== "undefined") {
@@ -34,6 +37,7 @@ export default function Nav({ scrollToSection }: any) {
     }
   }, [lastScrollY, controlNavbar]);
 
+  // move into control nav bar and useState setNavStyle
   const navStyle = navOpen
     ? `${styles.circle} ${styles.navOpen}`
     : navHidden
