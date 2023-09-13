@@ -1,0 +1,72 @@
+.austinContainer {
+  position: relative;
+  margin-top: 4rem;
+  perspective: 400px;
+}
+
+.austinContainer * {
+  font-size: clamp(3rem, 12vw, 6rem);
+  font-weight: 600;
+}
+
+.hiddenAustin {
+  color: rgba(0, 0, 0, 0);
+  position: absolute;
+  top: 0;
+}
+
+.austin {
+  position: relative;
+  animation: jump 1.6s ease 500ms;
+  transform-style: preserve-3d;
+}
+
+.hiddenAustin::after {
+  content: "";
+  height: 22%;
+  width: 200%;
+  background-color: var(--accent);
+  box-shadow: var(--box-shadow);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 15%;
+  z-index: -10;
+}
+
+@media (width > 768px) {
+  .austin::after {
+    width: 250%;
+  }
+}
+
+@keyframes jump {
+  0% {
+    transform: scale(1, 1) translateY(0) rotateX(0deg) translateZ(-50px);
+    z-index: -20;
+  }
+  10% {
+    transform: scale(1.1, 0.9) translateY(0) rotateX(0deg);
+    z-index: -20;
+  }
+  30% {
+    transform: scale(0.9, 1.1) translateY(-20%);
+    z-index: -20;
+  }
+  50% {
+    transform: scale(1.05, 0.95) translateY(0) rotateX(5deg);
+    z-index: 20;
+  }
+  60% {
+    transform: scale(1, 1) translateY(-5%) rotateX(5deg);
+    z-index: 20;
+  }
+  75% {
+    transform: scale(1, 1) translateY(0);
+    z-index: 20;
+  }
+  100% {
+    transform: scale(1, 1) translateY(0) rotateX(0deg) translateZ(0px);
+    z-index: 20;
+  }
+}

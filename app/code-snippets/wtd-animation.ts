@@ -11,7 +11,7 @@ export const dot =
   width: number;
 }
 
-export default function Dot({ height, width }: props) {
+export default function Luxx({ height, width }: props) {
   const delayMultiplier = 15;
   const minTime = Math.floor(height / 25);
   const maxTime = Math.floor(height / 10);

@@ -16,8 +16,6 @@ export default function App() {
   const pageRef = useRef<HTMLDivElement>(null);
   const projectsRef = useRef<HTMLDivElement>(null);
 
-  console.log(isMobile);
-
   const refs: { [key: string]: React.RefObject<HTMLDivElement> } = {
     projects: projectsRef,
     // about: aboutRef,
@@ -54,6 +52,7 @@ export default function App() {
               <button className={styles.scrollDownText}>
                 check out my work
               </button>
+              z
               <div className={styles.scrollDownArrowContainer}>
                 <div className={styles.scrollDownArrow}></div>
               </div>

@@ -1,10 +1,10 @@
 "use client";
 
-import styles from "@/app/styles/DesktopNav.module.css";
 import { useState, useEffect, useCallback } from "react";
 import SocialMediaIcons from "./SocialMediaIcons";
-
-const navLinks = ["about", "contact", "projects"];
+import { linkData, scrollData } from "../utils/nav";
+import styles from "@/app/styles/DesktopNav.module.css";
+import Link from "next/link";
 
 interface Props {
   scrollToSection: (sectionId: string) => void;
@@ -13,8 +13,6 @@ interface Props {
 export default function DesktopNav({ scrollToSection }: Props) {
   const [lastScrollY, setLastScrollY] = useState(0);
   const [navStyle, setNavStyle] = useState(`${styles.nav} ${styles.top}`);
-
-  console.log(navStyle);
 
   const controlNavbar = useCallback(() => {
     if (typeof window !== "undefined") {
@@ -39,20 +37,29 @@ export default function DesktopNav({ scrollToSection }: Props) {
     }
   }, [lastScrollY, controlNavbar]);
 
+  // project link needs scroll down
+  // all other links need <Link>
+  //
+
   return (
     <nav className={navStyle}>
       <ul className={styles.navLinks}>
-        {navLinks.map((link, i) => {
-          const delay = i * 50 + 500;
+        {linkData.map((link) => {
+          return (
+            <Link href={link.href} key={link.name}>
+              <li>{link.name}</li>
+            </Link>
+          );
+        })}
+        {scrollData.map((section) => {
           return (
             <li
-              key={link}
+              key={section}
               onClick={() => {
-                scrollToSection(link);
+                scrollToSection(section);
               }}
-              style={{ transitionDelay: `${delay}ms` }}
             >
-              {link}
+              projects
             </li>
           );
         })}

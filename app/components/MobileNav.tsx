@@ -1,11 +1,10 @@
 "use client";
 
-import styles from "@/app/styles/MobileNav.module.css";
 import { useState, useEffect, useCallback } from "react";
-import SocialMediaIcons from "./SocialMediaIcons";
 import Link from "next/link";
-
-const navLinks = ["about", "contact", "projects"];
+import SocialMediaIcons from "./SocialMediaIcons";
+import { linkData, scrollData } from "../utils/nav";
+import styles from "@/app/styles/MobileNav.module.css";
 
 interface Props {
   scrollToSection: (sectionId: string) => void;
@@ -44,6 +43,8 @@ export default function MobileNav({ scrollToSection }: Props) {
     ? `${styles.circle} ${styles.circleHidden}`
     : `${styles.circle}`;
 
+  let delay = 500;
+
   return (
     <nav>
       <div
@@ -60,19 +61,30 @@ export default function MobileNav({ scrollToSection }: Props) {
           close
         </div>
         <ul className={styles.navLinks}>
-          {navLinks.map((link, i) => {
-            const delay = i * 50 + 500;
+          {linkData.map((link, i) => {
+            delay += 50;
+            return (
+              <Link
+                href={link.href}
+                key={link.name}
+                style={{ transitionDelay: `${delay}ms` }}
+              >
+                <li>{link.name}</li>
+              </Link>
+            );
+          })}
+          {scrollData.map((section, i) => {
+            delay += 50;
             return (
               <li
-                key={link}
+                key={section}
                 onClick={() => {
-                  // setLinkScroll(true);
                   setNavOpen(false);
-                  scrollToSection(link);
+                  scrollToSection(section);
                 }}
                 style={{ transitionDelay: `${delay}ms` }}
               >
-                {link}
+                projects
               </li>
             );
           })}
