@@ -31,7 +31,7 @@ export default function WalkThatDuck() {
           hooked. When season 15 was announced, a friend invited me to join his
           fantasy league and asked that I text him my top picks for the season.
           After the first episode aired, I watched him use a calculator to
-          determine the scores and manually put them into a a Google sheet.
+          determine the scores and manually put them into a Google sheet.
         </p>
         <p>
           I started the first version of this app the same night. By the end of

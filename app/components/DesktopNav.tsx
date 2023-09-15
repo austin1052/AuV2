@@ -37,20 +37,9 @@ export default function DesktopNav({ scrollToSection }: Props) {
     }
   }, [lastScrollY, controlNavbar]);
 
-  // project link needs scroll down
-  // all other links need <Link>
-  //
-
   return (
     <nav className={navStyle}>
       <ul className={styles.navLinks}>
-        {linkData.map((link) => {
-          return (
-            <Link href={link.href} key={link.name}>
-              <li>{link.name}</li>
-            </Link>
-          );
-        })}
         {scrollData.map((section) => {
           return (
             <li
@@ -59,7 +48,7 @@ export default function DesktopNav({ scrollToSection }: Props) {
                 scrollToSection(section);
               }}
             >
-              projects
+              {section}
             </li>
           );
         })}

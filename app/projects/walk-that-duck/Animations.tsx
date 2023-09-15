@@ -18,12 +18,23 @@ export default function Animations() {
       >
         <div className={styles.description}>
           <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis
-            qui sint similique repellendus totam dolorum nobis eius atque
-            debitis ullam omnis fugit voluptatem iste fuga minus hic, vero
-            tempora deleniti rem quibusdam. Assumenda velit illum a tempora
-            corporis facere labore dignissimos tempore hic quidem est vel fugiat
-            dolor, cupiditate consectetur?
+            I love creating animations with CSS. It amazes me that I can make
+            things move just by click-clacking on my keyboard. Animations add
+            life to a website and give users a more thrilling and immersive
+            experience. Without them, scrolling through a website would be no
+            different than scrolling through a PDF. Animations can be as simple
+            as having a some text slide down when opening a menu or more complex
+            by using <code>perspective</code> and <code>rotate3d</code> to have
+            a logo look like it&apos;s swinging out from behind the screen.
+          </p>
+          <p>
+            I added some Luxx to Walk that Duck by using Typescript to assign
+            random starting positions and lengths of time for some divs to rise
+            and fall in the background. To do this I frist determined the height
+            and width of the user&apos;s screen. The width is used to determine
+            the starting X position and the height is used to calculate the time
+            it takes for the Luxx the move from the from the top to the bottom
+            or vice versa. The
           </p>
         </div>
         <div className={styles.dotAnimation}>

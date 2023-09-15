@@ -15,10 +15,11 @@ export default function App() {
   const isMobile = useContext(MobileContext);
   const pageRef = useRef<HTMLDivElement>(null);
   const projectsRef = useRef<HTMLDivElement>(null);
+  const aboutRef = useRef<HTMLDivElement>(null);
 
   const refs: { [key: string]: React.RefObject<HTMLDivElement> } = {
     projects: projectsRef,
-    // about: aboutRef,
+    about: aboutRef,
     // contact: contactRef,
   };
 
@@ -41,10 +42,6 @@ export default function App() {
       <main>
         <div className={styles.pageContainer} ref={pageRef}>
           <div className={styles.heroContainer}>
-            {/* <div className={styles.austinContainer}>
-              <div className={styles.austin}>austin</div>
-              <h1 className={styles.hiddenAustin}>austin</h1>
-            </div> */}
             <SyntaxHighlighter language="css" style={snippetTheme}>
               {austinCode}
             </SyntaxHighlighter>
@@ -52,7 +49,6 @@ export default function App() {
               <button className={styles.scrollDownText}>
                 check out my work
               </button>
-              z
               <div className={styles.scrollDownArrowContainer}>
                 <div className={styles.scrollDownArrow}></div>
               </div>
@@ -60,6 +56,12 @@ export default function App() {
           </div>
           <div className={styles.projects} ref={projectsRef}>
             <WalkThatDuck />
+          </div>
+          <div className={styles.aboutSection} ref={aboutRef}>
+            <div className={styles.austinContainer}>
+              <div className={styles.austin}>austin</div>
+              <h1 className={styles.hiddenAustin}>austin</h1>
+            </div>
           </div>
         </div>
       </main>

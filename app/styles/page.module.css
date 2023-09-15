@@ -25,42 +25,6 @@
   /* font-weight: 600; */
 }
 
-/* .austinContainer {
-  position: relative;
-  margin-top: 4rem;
-  perspective: 400px;
-}
-
-.austinContainer * {
-  font-size: clamp(3rem, 12vw, 6rem);
-  font-weight: 600;
-}
-
-.hiddenAustin {
-  color: rgba(0, 0, 0, 0);
-  position: absolute;
-  top: 0;
-}
-
-.austin {
-  position: relative;
-  animation: jump 1.6s ease 500ms;
-  transform-style: preserve-3d;
-}
-
-.hiddenAustin::after {
-  content: "";
-  height: 22%;
-  width: 200%;
-  background-color: var(--accent);
-  box-shadow: var(--box-shadow);
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 15%;
-  z-index: -10;
-} */
-
 .scrollDownContainer {
   display: flex;
   flex-direction: column;
@@ -106,6 +70,48 @@
   box-shadow: var(--box-shadow);
   transform: translate(var(--translate), calc(var(--translate) * -1))
     rotate(90deg);
+}
+
+.aboutSection {
+  border-top: 1px solid var(--accent);
+}
+
+.austinContainer {
+  position: relative;
+  margin-top: 4rem;
+  perspective: 400px;
+  display: flex;
+  justify-content: center;
+}
+
+.austinContainer * {
+  font-size: clamp(3rem, 12vw, 6rem);
+  font-weight: 600;
+}
+
+.hiddenAustin {
+  color: rgba(0, 0, 0, 0);
+  position: absolute;
+  top: 0;
+}
+
+.austin {
+  position: relative;
+  animation: jump 1.6s ease 500ms;
+  transform-style: preserve-3d;
+}
+
+.hiddenAustin::after {
+  content: "";
+  height: 22%;
+  width: 200%;
+  background-color: var(--accent);
+  box-shadow: var(--box-shadow);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 15%;
+  z-index: -10;
 }
 
 @media (width > 768px) {

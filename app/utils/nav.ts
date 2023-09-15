@@ -10,5 +10,5 @@ export const linkData = [
 ];
 
 export const scrollData = [
-  "projects"
+  "projects", "about"
 ]

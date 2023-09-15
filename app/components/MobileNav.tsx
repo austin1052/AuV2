@@ -61,30 +61,18 @@ export default function MobileNav({ scrollToSection }: Props) {
           close
         </div>
         <ul className={styles.navLinks}>
-          {linkData.map((link, i) => {
-            delay += 50;
-            return (
-              <Link
-                href={link.href}
-                key={link.name}
-                style={{ transitionDelay: `${delay}ms` }}
-              >
-                <li>{link.name}</li>
-              </Link>
-            );
-          })}
-          {scrollData.map((section, i) => {
+          {scrollData.map((section) => {
             delay += 50;
             return (
               <li
                 key={section}
+                style={{ transitionDelay: `${delay}ms` }}
                 onClick={() => {
                   setNavOpen(false);
                   scrollToSection(section);
                 }}
-                style={{ transitionDelay: `${delay}ms` }}
               >
-                projects
+                {section}
               </li>
             );
           })}
