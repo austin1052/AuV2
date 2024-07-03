@@ -40,8 +40,9 @@ export default function AuthFormValidation() {
             These CSS selectors should be combined with the selector{" "}
             <code>:not</code> to ensure that the invalid styles are only applied
             after the user has finished typing and has either clicked off of the
-            input field or tried to submit the form. Take a look at the CSS code
-            snippet below to see how I used <code>:not</code> to do this.
+            input field or tried to submit the form.
+            {/* Take a look at the CSS code
+            snippet below to see how I used <code>:not</code> to do this. */}
           </p>
           {/* <code>input:has(:invalid:not(:focus) :not(:placeholder-shown))</code> */}
           <p>

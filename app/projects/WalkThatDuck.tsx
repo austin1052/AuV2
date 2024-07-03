@@ -7,7 +7,14 @@ import LightDarkMode from "@/projects/walk-that-duck/LightDarkMode";
 import AuthFormValidation from "@/projects/walk-that-duck/AuthFormValidation";
 import Animations from "@/projects/walk-that-duck/Animations";
 
-const technologies = ["Typescript", "Next.js", "React", "CSS", "Supabase"];
+const technologies = [
+  "Typescript",
+  "Next.js",
+  "React",
+  "CSS",
+  "Supabase",
+  "Prisma",
+];
 const links = {
   github: "https://github.com/austin1052/drag-race-supabase",
   site: "https://walkthatduck.vercel.app",
@@ -20,7 +27,7 @@ export default function WalkThatDuck() {
         <h2>walk that duck</h2>
       </div>
       <div className={styles.projectSummary}>
-        an interactive Ru Paul&apos;s Drag Race fantasy league
+        an interactive Ru Paul&apos;s Drag Race fantasy game
       </div>
       <TechCards technologies={technologies} />
       <ProjectLinks links={links} />
@@ -40,11 +47,9 @@ export default function WalkThatDuck() {
           fun, and it was an easy place to check our standing in the league.
         </p>
         <p>
-          I am working with a partner on Walk that Duck v2, and we will have a
-          full featured app when season 16 aires in January 2024. Users will be
-          able to create a profile, join and create leagues, complete weekly
-          polls for extra points, and chat with others who enjoy Drag Race and
-          queer culture.
+          In v2 of Walk that Duck, users will be able to create a profile, join
+          and create leagues, complete weekly polls for extra points, and chat
+          with others who enjoy Drag Race and queer culture.
         </p>
         <p>
           Some of the completed features are highlighted here. I will be

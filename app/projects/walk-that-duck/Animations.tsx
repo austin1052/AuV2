@@ -30,11 +30,11 @@ export default function Animations() {
           <p>
             I added some Luxx to Walk that Duck by using Typescript to assign
             random starting positions and lengths of time for some divs to rise
-            and fall in the background. To do this I frist determined the height
+            and fall in the background. To do this I first determined the height
             and width of the user&apos;s screen. The width is used to determine
             the starting X position and the height is used to calculate the time
             it takes for the Luxx the move from the from the top to the bottom
-            or vice versa. The
+            or vice versa.
           </p>
         </div>
         <div className={styles.dotAnimation}>
@@ -48,8 +48,6 @@ export default function Animations() {
           <Dots />
         </div>
       </div>
-
-      {/* </div> */}
     </section>
   );
 }
